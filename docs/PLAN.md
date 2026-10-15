@@ -2,7 +2,6 @@
 
 > Technical Interview Task: REST API + functional frontend with secure authentication,
 > role-based access control, MongoDB indexing, and aggregation pipelines.
-> Source: `Backend Interview Task (1) (1).pdf`
 
 ## Decisions
 
