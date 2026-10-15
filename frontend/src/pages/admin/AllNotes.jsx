@@ -39,9 +39,12 @@ export default function AllNotes() {
       </p>
       {error && <p className="error">{error}</p>}
       {loading ? (
-        <p className="muted">Loading notes…</p>
+        <p className="muted loading">Loading notes…</p>
       ) : notes.length === 0 ? (
-        <p className="muted">No notes exist yet.</p>
+        <div className="empty-state">
+          <span className="icon">🗒️</span>
+          No notes exist yet.
+        </div>
       ) : (
         <div className="grid">
           {notes.map((note) => (

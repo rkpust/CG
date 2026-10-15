@@ -37,7 +37,7 @@ export default function Register() {
   };
 
   return (
-    <div style={{ maxWidth: 420, margin: "40px auto" }}>
+    <div className="auth-wrap">
       <h1>Create an account</h1>
       {error && <p className="error">{error}</p>}
       <form className="card" onSubmit={handleSubmit}>

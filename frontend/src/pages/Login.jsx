@@ -27,7 +27,7 @@ export default function Login() {
   };
 
   return (
-    <div style={{ maxWidth: 420, margin: "40px auto" }}>
+    <div className="auth-wrap">
       <h1>Log in</h1>
       {error && <p className="error">{error}</p>}
       <form className="card" onSubmit={handleSubmit}>

@@ -83,7 +83,7 @@ export default function MyNotes() {
 
   return (
     <div>
-      <div className="card-head">
+      <div className="page-head">
         <h1>My Notes</h1>
         {!creating && (
           <button className="primary" onClick={() => setCreating(true)}>
@@ -106,9 +106,12 @@ export default function MyNotes() {
       )}
 
       {loading ? (
-        <p className="muted">Loading notes…</p>
+        <p className="muted loading">Loading notes…</p>
       ) : notes.length === 0 && !creating ? (
-        <p className="muted">No notes yet — create your first one.</p>
+        <div className="empty-state">
+          <span className="icon">🗒️</span>
+          No notes yet — create your first one.
+        </div>
       ) : (
         <div className="grid">
           {notes.map((note) =>

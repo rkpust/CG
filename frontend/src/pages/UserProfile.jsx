@@ -6,7 +6,7 @@ export default function UserProfile() {
   if (!user) return null;
 
   return (
-    <div style={{ maxWidth: 520, margin: "0 auto" }}>
+    <div className="auth-wrap">
       <h1>Profile</h1>
       <div className="card">
         <table>

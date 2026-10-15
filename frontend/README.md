@@ -1,7 +1,8 @@
 # Notes App — Frontend (React + Vite)
 
-Functional SPA for the note-taking interview task. Styling is deliberately
-minimal — the focus is on functionality and integration with the REST API.
+Functional SPA for the note-taking interview task, focused on functionality and
+integration with the REST API. The UI uses a hand-rolled CSS design system
+(see `src/styles.css`) — no CSS framework or UI library dependency.
 
 ## Setup
 
@@ -46,6 +47,9 @@ The login page has "Fill admin" / "Fill user" buttons for quick access.
   - All Notes: everyone's notes, read-only
   - By Interest: users grouped by interest from the backend's
     `$unwind → $group` aggregation (`GET /api/users/by-interests`)
+- **UI** — custom CSS design system: Inter typography, gradient accents,
+  glass sticky navbar, elevated hover cards, focus rings, colored badges,
+  empty states, loading pulse, responsive grid — zero extra dependencies
 
 ## Build
 

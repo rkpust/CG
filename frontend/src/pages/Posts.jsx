@@ -75,7 +75,7 @@ export default function Posts() {
 
   return (
     <div>
-      <div className="card-head">
+      <div className="page-head">
         <h1>Posts</h1>
         {user && !creating && (
           <button className="primary" onClick={() => setCreating(true)}>
@@ -127,7 +127,7 @@ export default function Posts() {
       )}
 
       {/* $lookup result panel */}
-      {authorLoading && <p className="muted">Loading author posts…</p>}
+      {authorLoading && <p className="muted loading">Loading author posts…</p>}
       {author && !authorLoading && (
         <section className="card">
           <div className="card-head">
@@ -158,9 +158,12 @@ export default function Posts() {
       )}
 
       {loading ? (
-        <p className="muted">Loading posts…</p>
+        <p className="muted loading">Loading posts…</p>
       ) : posts.length === 0 ? (
-        <p className="muted">No posts yet.</p>
+        <div className="empty-state">
+          <span className="icon">📝</span>
+          No posts yet.
+        </div>
       ) : (
         posts.map((post) => (
           <article className="card" key={post._id}>

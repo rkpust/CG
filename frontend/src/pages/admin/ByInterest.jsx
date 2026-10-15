@@ -25,14 +25,17 @@ export default function ByInterest() {
       </p>
       {error && <p className="error">{error}</p>}
       {loading ? (
-        <p className="muted">Loading groups…</p>
+        <p className="muted loading">Loading groups…</p>
       ) : groups.length === 0 ? (
-        <p className="muted">No interests recorded yet.</p>
+        <div className="empty-state">
+          <span className="icon">🏷️</span>
+          No interests recorded yet.
+        </div>
       ) : (
         groups.map((group) => (
           <section className="card" key={group._id}>
             <div className="card-head">
-              <h2 style={{ textTransform: "capitalize" }}>{group._id}</h2>
+              <h2 className="interest-title">{group._id}</h2>
               <span className="badge">
                 {group.count} user{group.count === 1 ? "" : "s"}
               </span>

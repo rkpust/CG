@@ -91,7 +91,7 @@ export default function Users() {
 
   return (
     <div>
-      <div className="card-head">
+      <div className="page-head">
         <h1>Manage Users</h1>
         {!creating && (
           <div className="row-actions">
@@ -138,7 +138,12 @@ export default function Users() {
 
       <div className="card" style={{ overflowX: "auto" }}>
         {loading ? (
-          <p className="muted">Loading users…</p>
+          <p className="muted loading">Loading users…</p>
+        ) : users.length === 0 ? (
+          <div className="empty-state">
+            <span className="icon">👤</span>
+            No users found.
+          </div>
         ) : (
           <table>
             <thead>
